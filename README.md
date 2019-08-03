@@ -1,6 +1,6 @@
 Here multiple Apache Kafka producers will be implemented to simulate the real-time streaming of the data which will be processed by Apache Spark Streaming client and then inserted into MongoDB. Simulating real-time data using Apache Kafka Producers.
 
-1. Kafka Producers
+1. Kafka Producers (Note: Kafka should be configured before running these files for expected behaviour)
 
 a. Event Producer 1: A python program that loads all the data from climate_streaming.csv and randomly feed the data to the stream every 5 seconds. Additional information such as sender_id and created_time is added. 
 b. Event Producer 2: A python program that loads all the data from hotspot_AQUA_streaming.csv and randomly feed the data to the stream every 10 - 30 seconds. AQUA is the satellite from NASA that reports latitude, longitude, confidence and surface temperature of a location. Additional information such as sender_id and created_time is added. 

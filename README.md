@@ -3,7 +3,9 @@ Here multiple Apache Kafka producers will be implemented to simulate the real-ti
 1. Kafka Producers (Note: Kafka should be configured before running these files for expected behaviour)
 
 a. Event Producer 1: A python program that loads all the data from climate_streaming.csv and randomly feed the data to the stream every 5 seconds. Additional information such as sender_id and created_time is added. 
+
 b. Event Producer 2: A python program that loads all the data from hotspot_AQUA_streaming.csv and randomly feed the data to the stream every 10 - 30 seconds. AQUA is the satellite from NASA that reports latitude, longitude, confidence and surface temperature of a location. Additional information such as sender_id and created_time is added. 
+
 c. Event Producer 3: A python program that loads all the data from hotspot_TERRA_streaming.csv and randomly feed the data to the stream every 10 - 30 seconds. TERRA is another satellite from NASA that reports latitude, longitude, confidence and surface temperature of a location. Additional information such as sender_id and created_time is added.  
 
 2. Stream Processing using Apache Spark Streaming. 
@@ -13,4 +15,5 @@ a. Streaming Application: A streaming application in Apache Spark Streaming whic
 3. Data Visualisation using MatPlotLib 
 
 a. Streaming data visualization: i. For the incoming climate data, the line graph of air temperature against arrival time is plotted. Interesting points such as maximum and minimum values labeled. 
+
 b. Static data visualization: Python programs using pymongo to get the data from the MongoDB collection(s) created and the following visualizations performed. i. Records with the top 10 number of fires. A bar chart with time as the x-axis and number of fires as the y-axis. ii. Plotted fire locations in the map with air temperature, surface temperature, relative humidity and confidence
